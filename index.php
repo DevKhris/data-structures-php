@@ -26,15 +26,23 @@ function printText($input)
     print $input . PHP_EOL ;
 }
 
-function swap($after, $current, $array)
+/**
+ * Swap array values function
+ *
+ * @param int $previous previous item in array
+ * @param int $current  current item in array
+ * @param array $array  array to swap values
+ *
+ * @return array         return given array
+ *
+ */
+function swap($previous, $current, $array)
 {
-    $previousItem = $array[$after];
+    $previousItem = $array[$previous];
     $currentItem = $array[$current];
 
-    $array[$after] = $previousItem;
-    $array[$current] = $currentItem;
-
-    printText("$array[$after] changed by $array[$current]");
+    $array[$previous] = $currentItem;
+    $array[$current] = $previousItem;
 
     return $array;
 }
