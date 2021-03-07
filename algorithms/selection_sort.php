@@ -1,21 +1,4 @@
 <?php
-require_once '../index.php';
-
-$unsorted = [
- 125,
- 35,
- 48,
- 32,
- 78,
- 12,
- 65,
- 54,
- 31,
- 546,
- 2,
-];
-
-$sorted = selection_sort($unsorted);
 
 function selection_sort(array $array)
 {
@@ -41,5 +24,3 @@ function selection_sort(array $array)
 
     return $array;
 }
-
-print_r($sorted);
